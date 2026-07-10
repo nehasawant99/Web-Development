@@ -180,4 +180,5 @@ docker compose up          # Start multiple services
 
 ---
 
+# These notes are for educational purposes and study material. To understand better and faster
 
