@@ -1,4 +1,4 @@
-# 📋 The Complete Commit Shortcut List
+#  The Complete Commit Shortcut List
 
 | Shortcut | When to Use It | Example Message |
 | --- | --- | --- |
