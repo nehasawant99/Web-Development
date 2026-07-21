@@ -12,7 +12,7 @@
 
 ---
 
-# 🛠️ How to Use Them (The 3 Golden Rules)
+#  How to Use Them (The 3 Golden Rules)
 
 ### 1. The Structure
 
