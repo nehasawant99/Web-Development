@@ -567,18 +567,4 @@ Whenever you solve a problem, think in this order:
 4. Is a loop required?
 5. What should be printed as output?
 
----
 
-# Learning Roadmap
-
-- Variables
-- Input & Output
-- Operators
-- Conditional Statements
-- Loops
-- Functions
-- Arrays
-- Searching
-- Sorting
-- Problem Solving
-- Convert Pseudocode to Python
