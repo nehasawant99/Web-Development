@@ -64,15 +64,6 @@ ENDFOR
 END
 ```
 
-```
-
-## Learning
-
-Every loop must have an ending keyword.
-
-- FOR → ENDFOR
-- WHILE → ENDWHILE
-
 ---
 
 # Question 3 - Largest of Three Numbers
