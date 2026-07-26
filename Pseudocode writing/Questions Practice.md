@@ -59,24 +59,11 @@ START
 
 FOR i = 1 TO 100
     PRINT i
+ENDFOR
 
 END
 ```
 
-## Mistake
-
-- Forgot to close the loop.
-
-## Correct Code
-
-```text
-START
-
-FOR i = 1 TO 100
-    PRINT i
-ENDFOR
-
-END
 ```
 
 ## Learning
