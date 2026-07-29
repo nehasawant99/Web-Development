@@ -237,6 +237,8 @@ num = searchNum
 
 ---
 
+---
+
 # Common Mistakes I Made
 
 | Mistake | Correct Approach |
