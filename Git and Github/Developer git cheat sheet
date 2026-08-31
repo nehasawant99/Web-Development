@@ -1,0 +1,488 @@
+# Git & GitHub — One-Page Developer Cheat Sheet
+
+## 1. First-Time Git Setup
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+git config --global --list
+```
+
+---
+
+## 2. Create / Start a Repository
+
+### Create a new local repository
+
+```bash
+git init
+```
+
+### Clone an existing GitHub repository
+
+```bash
+git clone <repository-url>
+cd <repository-name>
+```
+
+---
+
+## 3. Check Your Project
+
+```bash
+git status
+```
+
+Shows:
+
+* Modified files
+* New files
+* Deleted files
+* Staged files
+* Current branch
+
+### View commit history
+
+```bash
+git log
+```
+
+Short version:
+
+```bash
+git log --oneline
+```
+
+---
+
+## 4. Add Changes
+
+### Add one file
+
+```bash
+git add filename
+```
+
+### Add everything
+
+```bash
+git add .
+```
+
+### Unstage a file
+
+```bash
+git restore --staged filename
+```
+
+---
+
+## 5. Commit Changes
+
+```bash
+git commit -m "Add payment model"
+```
+
+Good commit messages describe **what changed**.
+
+Examples:
+
+```bash
+git commit -m "Add product API"
+git commit -m "Fix cart calculation"
+git commit -m "Add JWT authentication"
+git commit -m "Update README"
+```
+
+---
+
+# 6. Connect Local Project to GitHub
+
+```bash
+git remote add origin <repository-url>
+```
+
+Check remote:
+
+```bash
+git remote -v
+```
+
+---
+
+# 7. Push Code to GitHub
+
+First push:
+
+```bash
+git push -u origin main
+```
+
+Later:
+
+```bash
+git push
+```
+
+---
+
+# 8. Get Latest Changes
+
+```bash
+git pull
+```
+
+Pull from a specific branch:
+
+```bash
+git pull origin main
+```
+
+---
+
+# 9. Branches
+
+### See branches
+
+```bash
+git branch
+```
+
+### Create branch
+
+```bash
+git branch feature-name
+```
+
+### Switch branch
+
+```bash
+git switch feature-name
+```
+
+### Create + switch
+
+```bash
+git switch -c feature-name
+```
+
+Example:
+
+```bash
+git switch -c payment-api
+```
+
+### Delete local branch
+
+```bash
+git branch -d feature-name
+```
+
+---
+
+# 10. Merge
+
+Switch to the branch you want to merge into:
+
+```bash
+git switch main
+```
+
+Then:
+
+```bash
+git merge feature-name
+```
+
+---
+
+# 11. Undo Changes
+
+### Discard changes in a file
+
+```bash
+git restore filename
+```
+
+### Unstage changes
+
+```bash
+git restore --staged filename
+```
+
+### Undo last commit but keep changes
+
+```bash
+git reset --soft HEAD~1
+```
+
+### Completely remove the last commit and changes
+
+```bash
+git reset --hard HEAD~1
+```
+
+⚠️ Be careful with `--hard`.
+
+---
+
+# 12. Stash
+
+Temporarily save unfinished work:
+
+```bash
+git stash
+```
+
+See stashes:
+
+```bash
+git stash list
+```
+
+Restore latest stash:
+
+```bash
+git stash pop
+```
+
+---
+
+# 13. Compare Changes
+
+```bash
+git diff
+```
+
+Compare staged changes:
+
+```bash
+git diff --staged
+```
+
+---
+
+# 14. Remote Branches
+
+```bash
+git branch -a
+```
+
+Fetch latest remote information:
+
+```bash
+git fetch
+```
+
+Fetch and then merge:
+
+```bash
+git pull
+```
+
+---
+
+# 15. Tags / Releases
+
+Create a version tag:
+
+```bash
+git tag v1.0.0
+```
+
+Push tag:
+
+```bash
+git push origin v1.0.0
+```
+
+---
+
+# 16. Remove Files
+
+Delete file through Git:
+
+```bash
+git rm filename
+```
+
+Rename file:
+
+```bash
+git mv oldname newname
+```
+
+---
+
+# 17. GitHub Developer Workflow
+
+This is the workflow you'll use constantly:
+
+```text
+CREATE / CLONE PROJECT
+        ↓
+   git status
+        ↓
+    MAKE CHANGES
+        ↓
+     git diff
+        ↓
+     git add .
+        ↓
+git commit -m "message"
+        ↓
+      git push
+        ↓
+      GitHub
+```
+
+For an existing project:
+
+```bash
+git pull
+# Make changes
+
+git status
+git diff
+git add .
+git commit -m "Describe change"
+git push
+```
+
+---
+
+# 18. Feature Development Workflow
+
+For a larger feature:
+
+```bash
+git pull origin main
+
+git switch -c payment-api
+
+# Develop feature
+
+git status
+git add .
+git commit -m "Add payment API"
+
+git push -u origin payment-api
+```
+
+Then create a **Pull Request on GitHub**.
+
+After review:
+
+```text
+Feature Branch
+      ↓
+Pull Request
+      ↓
+Code Review
+      ↓
+Merge
+      ↓
+main
+```
+
+---
+
+# 19. Essential Commands to Memorize
+
+If you remember only these:
+
+```bash
+git clone <url>
+git status
+git add .
+git commit -m "message"
+git push
+git pull
+git branch
+git switch -c <branch>
+git switch <branch>
+git merge <branch>
+git log --oneline
+git diff
+git stash
+git restore <file>
+```
+
+### The 5 commands you'll probably use the most
+
+```bash
+git status
+git add .
+git commit -m "message"
+git pull
+git push
+```
+
+---
+
+# 20. Important Git Concepts
+
+```text
+Working Directory
+       ↓
+    git add
+       ↓
+Staging Area
+       ↓
+  git commit
+       ↓
+Local Repository
+       ↓
+   git push
+       ↓
+     GitHub
+```
+
+And the reverse:
+
+```text
+GitHub
+  ↓
+git pull
+  ↓
+Local Repository
+  ↓
+Working Directory
+```
+
+---
+
+# 21. Developer Career Rule
+
+Don't use Git only as:
+
+```bash
+git add .
+git commit -m "update"
+git push
+```
+
+Use Git to demonstrate your development workflow:
+
+```text
+Issue
+ ↓
+Feature Branch
+ ↓
+Development
+ ↓
+Commit
+ ↓
+Push
+ ↓
+Pull Request
+ ↓
+Code Review
+ ↓
+Merge
+ ↓
+Release
+```
+
+This is much closer to how Git is used in professional development teams.
